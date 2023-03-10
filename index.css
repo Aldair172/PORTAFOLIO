@@ -1,0 +1,869 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;600&display=swap');
+
+html{
+    font-size: 62.5%;
+    background-image: linear-gradient(-245deg, #ffffff 0%, #545454 100%);
+}
+
+a{
+    color: #000000;
+}
+
+a:visited{
+    color: #000000;
+}
+
+#circle-container{
+    position: fixed;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+}
+
+#circle{
+    position: absolute;
+    width: 1px;
+    height: 100%;
+    top: 0%;
+    right:50%;
+    border-left: 1px solid black;
+    transition: all .5s ease;
+}
+
+#circle.career{
+    width: 85%;
+    height: 100%;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border-left: 1px solid black;
+    transition: all .3s ease;
+}
+
+
+#circle.career::after{
+    background-color: black;
+    content:"Career";
+    color:white;
+    position: absolute;
+    top:0;
+    font-size: 1.5rem;
+    padding: 10px
+}
+
+#circle.left{
+    width: 50%;
+    height: fit-content;
+    top:50%;
+    right: 5%;
+    transform: translateY(-50%);
+    box-shadow: 0 19px 38px rgb(0 0 0 / 10%), 0 15px 12px rgb(0 0 0 / 12%);
+    transition: all .5s ease;
+    border: 1px solid black;
+    color: black;
+    padding: 0px 30px 30px 30px;
+}
+
+#circle.right{
+    width: 50%;
+    height: fit-content;
+    top: 50%;
+    right: 45%;
+    transform: translateY(-50%);
+    box-shadow: 0 19px 38px rgb(0 0 0 / 10%), 0 15px 12px rgb(0 0 0 / 12%);
+    transition: all .5s ease;
+    border: 1px solid black;
+    color: black;
+    padding: 0px 30px 30px 30px;
+}
+
+#circle.noline{
+    opacity: 0;
+    transition: all .5s ease;
+}
+
+
+body{
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+}
+
+nav{
+    display: flex;
+    transform: translateY(-200px);
+    font-weight: 600;
+    font-size: 2.3rem;
+    animation: slideDown 2s ease 4.5s forwards;
+    padding: 30px 50px 30px 30px;
+    border-bottom: 1px solid black;
+    background-color: white;
+}
+
+#socials{
+    display: flex;
+    gap: 12px;
+    justify-items: center;
+    align-items: center;
+}
+
+.social-icon{
+    min-width: 45px;
+    min-height: 45px;
+    width: 45px;
+    height: 45px;
+    color:white;
+    text-align: center;
+    line-height: 45px;
+    background-color: black;
+    border-radius: 50%;
+}
+
+#lwt{
+    margin-left: auto;
+}
+
+#loader{
+    position: fixed;
+    top:0;
+    left:0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+}
+
+.loader-image{
+    position: absolute;
+    width: 300px;
+    opacity: 0;
+}
+
+#image1{
+    left: 8%;
+    top: 5%;
+    animation: fadeInUp 1.3s ease forwards 1s, fadeOutUp 1.3s ease forwards 4s;
+}
+
+#image2{
+    right: 5%;
+    top: 9%;
+    animation: fadeInUp 1.3s ease forwards .5s, fadeOutUp 1.3s ease forwards 4s;
+}
+
+#image3{
+    left: 12%;
+    bottom: 5%;
+    animation: fadeInUp 1.3s ease forwards 2s, fadeOutUp 1.3s ease forwards 4s;
+}
+
+#image4{
+    right: 15%;
+    bottom: 5%;
+    animation: fadeInUp 1.3s ease forwards 1.5s, fadeOutUp 1.3s ease forwards 4s;
+}
+
+#welcome{
+    position: relative;
+    z-index: 3;
+}
+
+h2{
+    font-size: 14.0rem;
+    margin: 30px 0;
+    font-weight: 600;
+}
+
+.wrapper{
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.marquee{
+    white-space: nowrap;
+    overflow: hidden;
+    display: inline-block;
+}
+
+.marquee h2{
+    margin:0;
+}
+
+#test{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(-100%);
+    animation: slideImage 1s ease forwards 4s;
+    transform-origin: top center;
+    margin: 0 auto;
+    width: 400px;
+    height: 500px;
+    z-index: 3;
+    position: relative;
+}
+
+#project1{
+    animation: fadeInUp 1.3s ease forwards, imageWidth 1s ease forwards 4s;
+    background-image: url('file:///C:/Users/Edgar%20C%20O/Desktop/ISIC%208/DESARROLLO%20DE%20APLICACIONES%20EN%20LA%20NUBE/TEMA%201/Portafolio%20CV/Fotos/IMG_0652.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 500px;
+    width: 95%;
+    margin: 0 auto;
+}
+
+.welcome-text{
+    position: relative;
+    z-index: 2;
+}
+
+.animate-text-container{
+    position: relative;
+    overflow: hidden;
+}
+
+.animate-text-container h2 span{
+    display: inline-block;
+    transform: translateY(150%);
+}
+
+.animate-text-container h2 span:nth-child(1){
+    animation: slideLetterUp 1s ease forwards 3s;
+}
+
+#nameTxt{
+    margin-left: 20px;
+}
+
+#front{
+    text-align: center;
+}
+
+.marquee {
+    white-space: nowrap;
+    overflow: hidden;
+    display: inline-block;
+    animation: marquee 25s linear infinite;
+}
+
+.marquee h2 {
+    display: inline-block;
+}
+
+.work-together{
+    text-decoration: underline;
+    margin:0;
+}
+
+#myExperience{
+    width: 100%;
+    margin: 0 auto;
+    margin-top: -75px;
+    margin-bottom: 100px;
+}
+
+.left-bar-item{
+    font-size: 1.5rem;
+    border-bottom: 1px solid black;
+    padding: 25px 0px 25px 25px;
+}
+
+.content-item{
+    position: relative;
+    width: 100%;
+}
+
+.content-item:first-child{
+    margin-top:0px;
+}
+
+.content-img{
+    width: 85%;
+    margin: 0 auto;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    border:1px solid black;
+}
+
+#company-name{
+    color: black;
+    font-size: 6rem;
+    margin: 0;
+    display: inline-block;
+    margin-top: 20px;
+    font-weight: 600;
+    margin-left: 20px;
+}
+
+#company-date{
+    color: black;
+    font-size: 2rem;
+    margin: 0;
+    background-color: black;
+    color: white;
+    padding: 5px 10px;
+    display: inline-block;
+    margin-left: 20px;
+}
+
+#techstack{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    grid-auto-rows: minmax(150px, auto);
+    grid-gap: 3rem 2rem;
+    margin-top: 100px;
+    width: calc(100% + 80px);
+    transform: translate(-40px, 50px);
+}
+
+.wide{
+    grid-column: span 2;
+    background-color: black !important;
+}
+
+.icon{
+    font-size: 8rem;
+}
+
+
+.tech-item{
+    display: flex;
+    box-shadow: 0 19px 38px rgb(0 0 0 / 10%), 0 15px 12px rgb(0 0 0 / 12%);
+    background-color: rgb(92, 185, 239);
+    color: black;
+    border: 1px solid black;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    animation: itemFade 1s ease forwards;
+}
+
+
+.stop-scrolling {
+    height: 100%;
+    overflow: hidden;
+}
+
+@keyframes itemFade {
+    0%{
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.tech-item p{
+    padding: 10px 30px;
+    font-size: 1.5rem;
+    color: white;
+}
+
+
+
+@keyframes controls {
+    0%{
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+#myProjects{
+    width: 85%;
+    margin:0 auto;
+    margin-top:150px;
+}
+
+#myProjects h1{
+    font-size: 6rem;
+    text-align: center;
+    margin-top: 200px;
+}
+
+#comments h1{
+    font-size: 6rem;
+    text-align: center;
+    margin-bottom: 100px;
+    margin-top: 100px;
+}
+
+#bio{
+    width: 85%;
+    margin: 0 auto;
+}
+
+#bio h1{
+    font-size: 6rem;
+    text-align: center;
+    margin-bottom: 50px;
+    margin-top: 210px;
+}
+
+#bio p{
+    font-size: 1.8rem;
+    line-height: 40px;
+}
+
+.half{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.work-item{
+    margin-bottom: 250px;
+}
+
+.work-item.right{
+    margin-left: auto;
+    width: 100%;
+    max-width: 500px;
+}
+
+.work-item.left{
+    width: 120%;
+    max-width: 485px;
+}
+
+.desc{
+    font-size: 2.4rem;
+    margin: 20px 0px;
+  line-height: 1.5;
+  display: inline;
+  background-image: linear-gradient(
+        transparent 50%,
+        #a1e6ff 50%,
+        #a1e6ff 85%,
+        transparent 85%,
+        transparent 100%
+    );
+    background-repeat: no-repeat;
+    background-size: 0% 100%;
+    animation: animatedBackground 2s cubic-bezier(0.645, 0.045, 0.355, 1) 0.5s forwards;
+}
+
+.title{
+    font-size: 5rem;
+    font-weight: 600;
+    transform: translate(-50px, 10px);
+    background: black;
+    color: white;
+    display: table;
+}
+
+video{
+    filter: grayscale(100%);
+    width: 100%;
+}
+
+/*comments*/
+
+.comments-container{    
+    display: grid;
+    grid-template-columns: 50% 50%;
+    width: 85%;
+    margin: 0 auto;
+    gap: 1px;
+    background: black;
+}
+
+.person{    
+    color: black;
+    text-align: center;
+    display: inline-block;
+    padding: 20px 0px;
+    background: white;
+}
+
+.person-name{
+  font-weight: bold;
+  font-size: 20px;
+  text-decoration: underline;
+}
+
+.person-image{
+  width: 130px;
+  border-radius: 50%;
+  height: 130px;
+  border:1px solid black;
+  padding: 10px;
+}
+
+.person-company{
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.person-comment{
+  font-size:18px;
+  max-width: 800px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  line-height: 30px;
+  padding: 0 30px;
+}
+
+#edith{
+  position: relative;
+  display: inline-block;
+}
+
+#edith .circle-anim{
+  height: 10px;
+  width: 10px;
+  background-color: black;
+  border-radius: 50%;
+  transform: rotate(0deg);
+  display: inline-block;
+  position: absolute;
+  left:45px;
+  animation: rotate 10s linear infinite;
+  transform-origin: 30px 77px;
+}
+
+@keyframes rotate {
+  0%{
+    transform: rotate(0deg);
+  }
+  100%{
+    transform: rotate(360deg);
+  }
+}
+
+
+@keyframes slideDown{
+    0%{
+        transform: translateY(-200px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}
+
+@keyframes marquee {
+    0% {
+      transform: translate3d(0, 0, 0);
+    }
+    100% {
+      transform: translate3d(-50%, 0, 0);
+    }
+  }
+
+@keyframes imageWidth{
+    0%{
+        background-size: cover;
+        border:0px solid black;
+    }
+    100%{
+        background-size: 182%;
+        background-position: 44% 20%;
+        height: 150px;
+        width: 150px;
+        border-radius: 50%;
+        border:1px solid black;
+        margin-top: 0;
+    }
+}
+
+@keyframes slideImage{
+    0%{
+        transform: translateY(-100%); 
+        width: 400px; 
+        height: 600px;
+        border-radius: 0%;
+    }
+
+    100%{
+        transform: translateY(0%); 
+        height: 150px;
+        width: 150px;
+        border-radius: 50%;
+    }
+}
+
+@keyframes slideImageM{
+    0%{
+        transform: translateY(-100%); 
+        width: 400px; 
+        height: 600px;
+        border-radius: 0%;
+    }
+
+    100%{
+        transform: translateY(0%); 
+        height: 150px;
+        width: 150px;
+        border-radius: 50%;
+        margin: initial;
+        margin-left: 40px;
+    }
+}
+
+@keyframes fadeInUp{
+    0%{
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOutUp{
+    0%{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+    100%{
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+}
+
+@keyframes slideLetterUp{
+    0%{
+        transform: translateY(150%);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+
+@keyframes animatedBackground {
+    to {
+        background-size: 100% 100%;
+    }
+}
+
+/*article*/
+
+article blockquote {
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.2em;
+  font-size: 1.8em;
+  column-span: 2;
+  -webkit-column-span: 2;
+  margin: 0px;
+  padding: 0px;
+  margin-left: 5px;
+}
+
+article h1 {
+  font-family: 'Poppins', sans-serif;
+  text-transform: uppercase;
+  font-size: 4em;
+  line-height: 1em;
+  text-align: center;
+  font-weight: 700;
+  padding: 0px;
+  margin: 0px;
+  margin-bottom: 32px;
+}
+
+article h2,
+article h3,
+article h4,
+article h5,
+article h6 {
+    font-family: 'Poppins', sans-serif;
+}
+
+article h2 {
+  font-size: 3em;
+  line-height: 1em;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+article h3 {
+  font-size: 2.4em;
+  margin: 0px;
+  padding: 0px;
+  line-height: 0.8em;
+  padding-top: 20px;
+}
+
+article .time {
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  font-size: 1.6em;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  margin-bottom: 30px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+article p {
+    font-size: 1.8rem;
+    line-height: 28px;
+    font-family: 'Poppins', sans-serif;
+}
+
+@media only all and (min-width: 600px) {
+  article {
+    -moz-columns: 3;
+    -webkit-columns: 3;
+    columns: 3;
+    -webkit-column-gap: 40px;
+    -moz-column-gap: 40px;
+    column-gap: 40px;
+    line-height: 1.5em;
+    font-size: 1em;
+    -webkit-column-rule: 1px outset black;
+    -moz-column-rule: 1px outset black;
+    column-rule: 1px outset black;
+  }
+  article h1 {
+    font-size: 8em;
+    column-span: all;
+    -webkit-column-span: all;
+  }
+  article .time {
+    column-span: all;
+    -webkit-column-span: all;
+  }
+  article p {
+    text-align: justify;
+    text-justify: inter-word;
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto;
+    hyphenate-character: "\u2605";
+  }
+}
+
+@media only screen and (max-width: 720px) {
+  nav {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+  }
+
+  #lwt{
+      margin-left: initial;
+      text-align: center;
+      margin-top: 20px;
+  }
+
+  .welcome-text h2{
+      font-size: 4.6rem;
+  }
+
+  .loader-image{
+      width: 150px;
+  }
+
+    #image1{
+        left: 2%;
+        top: 2%;
+    }
+
+    #image2{
+        right: 2%;
+        top: 3%;
+    }
+
+    #image3{
+        left: 2%;
+        bottom: 7%;
+    }
+
+    #image4{
+        right: 5%;
+        bottom: 1%;
+    }
+
+    #project1{
+        height: 300px;
+        margin-top: 200px;
+        background-position: 0% 30%;
+    }
+
+    #test{
+        animation: slideImageM 1s ease forwards 4s;
+    }
+
+    #controls {
+        right: 5px;
+    }
+
+    #company-name{
+        margin-top: 80px;
+        margin-left: 0;
+    }
+
+    #techstack{
+        transform: translate(0px, 50px);
+        width: 90%;
+        margin: 0 auto;
+        margin-top: 30px;
+    }
+
+    #medtrainerImg .animate-text-container{
+        text-align: center;
+    }
+
+    #myProjects{
+        margin-top: 50px;
+    }
+
+    #myProjects h1{
+        margin-top: 0;
+    }
+
+    .half video{
+        width: 150px;
+    }
+
+    .title{
+        font-size: 2rem;
+        transform: translate(0);
+        display: block;
+        text-align: center;
+    }
+
+    .desc{
+        font-size: 1.4rem;
+    }
+
+    #circle.left{
+        width: 41%;
+        right: 1%;
+    }
+
+    #circle.right{
+        right: 38%;
+        width: 45%;
+    }
+
+    #comments h1{
+        margin-top: 0px;
+        margin-bottom: 30px;
+    }
+
+    #bio h1 {
+        margin-top: 110px;
+    }
+
+}
+
+
+@media only screen and (max-width: 780px) {
+  .comments-container{
+    grid-template-columns: 100% ;
+  }
+}
