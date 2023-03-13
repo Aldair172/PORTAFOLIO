@@ -205,7 +205,7 @@ h2{
 
 #project1{
     animation: fadeInUp 1.3s ease forwards, imageWidth 1s ease forwards 4s;
-    background-image: url('file:///C:/Users/Edgar%20C%20O/Desktop/ISIC%208/DESARROLLO%20DE%20APLICACIONES%20EN%20LA%20NUBE/TEMA%201/Portafolio%20CV/Fotos/IMG_0652.jpg');
+    background-image: url('https://github.com/Aldair172/PORTAFOLIO/blob/main/Fotos/IMG_0652.jpg');
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
